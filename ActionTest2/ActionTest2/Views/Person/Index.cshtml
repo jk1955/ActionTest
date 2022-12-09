@@ -1,0 +1,33 @@
+﻿@model ActionTest2.Models.Person;
+@{
+    ViewData["Title"] = "Person Page";
+
+    Person person = new Person(55, "Jim");
+
+}
+
+<h1>@TempData["url"]</h1>
+<h1>@TempData["id"]</h1>
+<h1>@TempData["name"]</h1>
+
+<h1>
+    @person.Id - @person.Name
+</h1>
+
+<script>const queryString = window.location.search;
+
+    const urlParams = new URLSearchParams(queryString);
+
+
+    const
+        keys = urlParams.keys(),
+        values = urlParams.values(),
+        entries = urlParams.entries();
+
+    for (const key of keys) console.log(key);
+
+    for (const value of values) console.log(value);
+
+    for (const entry of entries) {
+        console.log(`${entry[0]}: ${entry[1]}`);
+    }</script>

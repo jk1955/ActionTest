@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+    <h1>@TempData["url"]</h1>
+    <h1>@TempData["name"]</h1>
+    <h1>@TempData["id"]</h1>
+
+
+<h1>@Html.ActionLink("Person Information", "Index", "Person")</h1>
+
+<h1>@Html.ActionLink("Testing Person", "Index", "Person", new { Id = 555, Name = "Jim Kocsis" })</h1>
+
+<h1>@Html.ActionLink("Testing Home", "Index", "Home", new { Id = 55, Name = "James Kocsis" })</h1>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script>
+    var aTag = document.createElement('a');
+    $('#div_aTag').append(aTag);
+
+    var tmp = '@Html.ActionLink("Testing Home", "Index", "Home", new { Id = 555, Name = "Jim Kocsis" })'
+
+    tmp = tmp.replace(/<a href="/g, "");
+    tmp = tmp.replace(/Testing Home/g, "");
+    tmp = tmp.replace(/\/a/g, "");
+    tmp = tmp.replace(/>/g, "");
+    tmp = tmp.replace(/</g, "");
+    tmp = tmp.replace(/\"/g, "");
+
+    console.log("tmp is ", tmp);
+
+    aTag.href = tmp;
+
+    const LOCAL_STORAGE_KEY = "aTag";
+    var flag = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+
+    if (flag == null) {
+        aTag.click();
+        flag = "NOT_NULL"
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(flag));
+    }
+
+    console.log("aTag is ", aTag);
+
+</script>

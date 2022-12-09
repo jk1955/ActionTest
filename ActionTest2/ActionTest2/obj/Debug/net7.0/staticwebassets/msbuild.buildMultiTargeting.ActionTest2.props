@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/ActionTest2.props" />
+</Project>
