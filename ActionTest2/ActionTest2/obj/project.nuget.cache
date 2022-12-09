@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wPa2z7bsMNPQz+y+D9bSsPc+dWDUiZyTxCsXz/YwCCHO3DUeN2/V/kVsIXRnhMc8ciqgFygC8Ws7rvd/7+g4UA==",
+  "dgSpecHash": "2H4Wli1jEuGSOtCY5Gz5yH91vx5cwxNjX2pd4r4kysHGyok1XO4c4AZFMVw031lz6BMJ5oFf4ine41kyVt/hAw==",
   "success": true,
-  "projectFilePath": "/Users/jameskocsis/Projects/ActionTest2/ActionTest2/ActionTest2.csproj",
+  "projectFilePath": "/Users/jameskocsis/Projects/ActionTest/ActionTest2/ActionTest2/ActionTest2.csproj",
   "expectedPackageFiles": [
     "/Users/jameskocsis/.nuget/packages/humanizer.core/2.2.0/humanizer.core.2.2.0.nupkg.sha512",
     "/Users/jameskocsis/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",
